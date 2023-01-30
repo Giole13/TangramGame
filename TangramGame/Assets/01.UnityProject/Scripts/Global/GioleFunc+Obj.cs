@@ -39,7 +39,7 @@ public static partial class GioleFunc
     }
 
 
-    //! 씬의 루트 오브젝트를 서치해서 찾아주는 함수
+    //! 씬의 루트 오브젝트를 서치해서 찾아주는 함수 -> 현재 활성화 씬에서 특정 오브젝트(objName_)를 찾아주는 함수
     public static GameObject GetRootObj(string objName_)
     {
         Scene activeScene_ = GetActiveScene();
