@@ -32,7 +32,6 @@ public static partial class GioleFunc
 
 
 
-
     #region Assert for debug
     [System.Diagnostics.Conditional("DEBUG_MODE")]
     public static void Assert(bool condition)
