@@ -164,9 +164,9 @@ GameObject:
   - component: {fileID: 1516594144691987317}
   - component: {fileID: 7524434046900862779}
   - component: {fileID: 3470867351611581452}
-  - component: {fileID: 3311614645715043400}
+  - component: {fileID: 8346201847941518337}
   m_Layer: 5
-  m_Name: PuzzleLvPart_Sample
+  m_Name: PuzzlePlayPart_Sample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3311614645715043400
+--- !u!114 &8346201847941518337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6768188192122288698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 717dea39a863f7a4ca3cb12ee9b78a4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 295fd216f471f66458842aa93ed6c972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}

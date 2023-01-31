@@ -79,7 +79,7 @@ public static partial class GioleFunc
     {
         obj_.GetRect().anchoredPosition += position2D;
     }
-
+    
 
     //! 컴포넌트 가져오는 함수
     public static SomeType GetComponentMust<SomeType>(this GameObject obj)
@@ -120,4 +120,11 @@ public static partial class GioleFunc
         obj_.transform.localPosition =
             obj_.transform.localPosition + new Vector3(x, y, z);
     }           // AddLocalPos()
+
+    //! 새로운 오브젝트를 만들어서 컴포넌트를 리턴하는 함수
+    public static T CreateObj<T>(string objName) where T : Component
+    {
+        GameObject newObj = new GameObject(objName);
+        return newObj.AddComponent<T>();
+    }       // CreateObj()
 }

@@ -51,11 +51,11 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - Puzzle_SmallTriangle2
   - WoodBoard
-  - Puzzle_BigTriangle2
+  - Puzzle_BigTriangle1
   - Btn_Long_Green
   - Btn_Long_Green_Press
   - Puzzle_Square
-  - Puzzle_BigTriangle1
+  - Puzzle_BigTriangle2
   - Puzzle_SmallTriangle1
   - Puzzle_Parallelogram
   m_RenderDataMap: {}
