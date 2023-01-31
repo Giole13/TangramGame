@@ -66,6 +66,20 @@ public static partial class GioleFunc
         return activeScene_;
     }
 
+    //! RectTransform 을 반환하는 함수
+    public static RectTransform GetRect(this GameObject obj_)
+    {
+        return obj_.GetComponent<RectTransform>();
+    }       // GetRect()
+
+
+    //! 오브젝트 액커 포지션을 연산한는 함수
+    public static void AddAnchoredPos(this GameObject obj_,
+        Vector2 position2D)
+    {
+        obj_.GetRect().anchoredPosition += position2D;
+    }
+
 
     //! 컴포넌트 가져오는 함수
     public static SomeType GetComponentMust<SomeType>(this GameObject obj)

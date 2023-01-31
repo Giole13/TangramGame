@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 844359888}
   - component: {fileID: 844359890}
   - component: {fileID: 844359889}
+  - component: {fileID: 844359891}
   m_Layer: 5
   m_Name: PuzzleInitZone
   m_TagString: Untagged
@@ -578,6 +579,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844359887}
   m_CullTransparentMesh: 1
+--- !u!114 &844359891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844359887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f23335e5ac8e14e859af6329deba29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentCanvas: {fileID: 268726604}
 --- !u!1 &871812178
 GameObject:
   m_ObjectHideFlags: 0

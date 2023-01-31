@@ -6,15 +6,22 @@ using UnityEngine.EventSystems;
 public class PuzzlePlayPart : MonoBehaviour, IPointerDownHandler,
     IPointerUpHandler, IDragHandler
 {
-    private bool isClicked = false;
-    RectTransform rectTransform = default;
     public Canvas canvas = default;
+
+    private bool isClicked = false;
+    private RectTransform rectTransform = default;
+    private PuzzleInitZone puzzleInitZone = default;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         isClicked = false;
-        rectTransform = GetComponent<RectTransform>();
+        rectTransform = gameObject.GetRect();
+        puzzleInitZone = transform.parent.
+            gameObject.GetComponent<PuzzleInitZone>();
+
     }
 
     // Update is called once per frame
@@ -42,25 +49,27 @@ public class PuzzlePlayPart : MonoBehaviour, IPointerDownHandler,
     }       // OnPointerUp()
 
     //! 마우스를 드래그 중일 때 동작하는 함수
-    public void OnPointerMove(PointerEventData eventData)
-    {
-        //if(isClicked == true)
-        //{
-        //    gameObject.SetLocalPos(eventData.position.x, eventData.position.y, 0f);
+    //public void OnPointerMove(PointerEventData eventData)
+    //{
+    //    //if(isClicked == true)
+    //    //{
+    //    //    gameObject.SetLocalPos(eventData.position.x, eventData.position.y, 0f);
 
 
-        //    GioleFunc.Log($"마우스의 포지션을 눈으로 확인 : ({eventData.position.x}, {eventData.position.y})");
-        //}       //if: 현재 오브젝트를 선택한 경우
-    }       // OnPointerMove()
+    //    //    GioleFunc.Log($"마우스의 포지션을 눈으로 확인 : ({eventData.position.x}, {eventData.position.y})");
+    //    //}       //if: 현재 오브젝트를 선택한 경우
+    //}       // OnPointerMove()
 
 
-
-
+    //! 마우스를 드래그 중일 때 동작하는 함수
     public void OnDrag(PointerEventData eventData)
     {
         if (isClicked == true)
         {
-            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+
+            gameObject.AddAnchoredPos(
+                eventData.delta / puzzleInitZone.parentCanvas.scaleFactor);
+            //rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 
             //gameObject.SetLocalPos(Input.mousePosition.x, Input.mousePosition.y, 0f);
             
